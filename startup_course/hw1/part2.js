@@ -12,10 +12,10 @@ fs.writeFileSync('prime.txt', out);
 
 function prime(n) {
     var plist = [2]; //Solution set.
+    var number = 3;  //our initial number
 
-    //gen all primes till n 
-    for (var i = 3; i <= n; i++) {
-        isPrime(i)
+    while(plist.length != n) {
+        isPrime(number++);
     }
 
     return plist;
