@@ -1,9 +1,0 @@
-[core]
-	repositoryformatversion = 0
-	filemode = true
-	bare = true
-[remote "origin"]
-	url = https://github.com/startup-class/bitstarter.git
-[remote "heroku"]
-	url = git@heroku.com:powerful-inlet-3595.git
-	fetch = +refs/heads/*:refs/remotes/heroku/*
