@@ -38,12 +38,14 @@ var assertFileExists = function(infile) {
 };
 
 
+// This function allows us to grade an online file
 var checkRemoteFile = function (url, checks) { 
 
     restler.get(url).on('complete', function(result, response) {
         // write to local file
         var fileName = 'remoteFile.html';
         fs.writeFileSync(fileName, result);
+		// Grade file
         var checkJson = checkHtmlFile(fileName, program.checks);
         var outJson = JSON.stringify(checkJson, null, 4);
         console.log(outJson);
